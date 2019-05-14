@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.levon.cms.dao.UserInfoMapper">
+    <select id="getUserInfo" resultType="com.levon.cms.entity.UserInfo">
+      SELECT login_code,login_name,password,tel_phone,photo,create_time,update_time
+         FROM user_info WHERE login_code = #{loginCode}
+    </select>
+</mapper>
